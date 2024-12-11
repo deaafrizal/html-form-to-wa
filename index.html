@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>FORM To Whatsapp</title>
-  </head>
-  <body>
-    <div
-      class="max-w-xl w-full mx-auto text-center min-h-screen flex flex-col items-center justify-center"
-    >
-      <h1 class="text-2xl font-bold sm:text-3xl">Form To Whatsapp</h1>
-      <form
-        action="#"
-        class="mx-auto mb-0 mt-8 max-w-md space-y-4"
-        onsubmit="sendMessageToWhatsapp()"
-      >
-        <input
-          type="text"
-          class="w-full rounded-lg border border-gray-300 p-4 pe-12 text-sm shadow-sm"
-          placeholder="masukan nama anda"
-          id="nama"
-        />
-        <input
-          type="text"
-          class="w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
-          placeholder="ketik pesan anda..."
-          id="pesan"
-        />
-        <button
-          type="submit"
-          class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white w-full"
-        >
-          Kirim Pesan
-        </button>
-      </form>
-    </div>
-    <script>
-      function sendMessageToWhatsapp() {
-        const urlToWhatsapp = `https://wa.me/628119072423?text=Halo, nama saya ${nama.value}, ${pesan.value}`;
-
-        window.open(urlToWhatsapp, "_blank");
-      }
-    </script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservasi BISNIS SAYA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="" class="formulir">
+        <img src="Logo.jpg" class="gambarLogo">
+        
+        <h1 class="formulir__judul">BISNIS SAYA</h1>
+        <h3 class="formulir__subjudul">Reservasi</h3>
+        <p class="formulir__paragraf">Isi formulir singkat ini untuk menjadwalkan janji di BISNIS SAYA.</p>
+       
+        <label for="pelanggan" class="formulir__label">Siapa nama Anda?</label>
+        <input id="pelanggan" type="text" class="formulir__input" placeholder="Tuliskan nama lengkap Anda">
+        
+        <label for="tanggal" class="formulir__label">Pilih tanggal reservasi</label>
+        <input id="tanggal" type="date" class="formulir__input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+        
+        <label for="waktu" class="formulir__label">Pilih waktu reservasi</label>
+        <input id="waktu" type="time" class="formulir__input">
+        
+        <label for="layanan" class="formulir__label">Layanan apa yang ingin Anda pesan?</label>
+        <select id="layanan" name="daftarLayanan" class="formulir__input">
+            <option>LAYANAN 1 - Rp HARGA</option>
+            <option>LAYANAN 2 - Rp HARGA</option>
+            <option>LAYANAN 3 - Rp HARGA</option>
+            <option>LAYANAN 4 - Rp HARGA</option>
+            <option>LAYANAN 5 - Rp HARGA</option>
+        </select>
+        
+        <div id="respon"></div>
+        <button id="kirim" class="formulir__kirim">Kirim ke WhatsApp</button>
+    </form>
+    <script src="form.js"></script>
+</body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tombol ke WhatsApp</title>
+</head>
+
+<body>
+    <button id="tombol-saya">Info Lebih Lanjut</button>
+    <script>
+        document.querySelector('#tombol-saya').addEventListener('click', e => {
+            e.preventDefault();
+
+            //MASUKKAN NOMOR WHATSAPP YANG VALID DI SINI:
+            const telepon = '6285860099046';
+
+            const href = window.location.href;
+
+            let urlToWhatsapp = `https://api.whatsapp.com/send?phone=${telepon}&text=
+                  *_BISNIS SAYA_*%0A
+                  *Halo!*%0A%0A
+                  *Saya Butuh Informasi Lebih Lanjut*%0A
+                  ${href}%0A
+                  *Terima Kasih*%0A
+
+                  `;
+
+            window.open(urlToWhatsapp, "_blank");;
+        });
+    </script>
+</body>
+
+</html>
