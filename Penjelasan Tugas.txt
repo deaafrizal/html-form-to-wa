@@ -1,0 +1,8 @@
+kak perkenalkan nama saya Rizqi Syahrul Mubarok, saya mahasiswa dari Universitas Muhammadiyah bandung.
+disini saya ditugaskan untuk menambahkan beberapa fitur atau memperbaiki bug dalam satu Project Open Source.
+untuk detail tugas nya: 
+"Temukan proyek open source di GitHub yang Anda minati, fork repository-nya,
+dan buat pull request untuk perbaikan atau penambahan fitur. Dokumentasikan proses kontribusi Anda."
+
+Dalam tugas tersebut saya hanya diperintahkan untuk pull request.
+Terimakasih atas ketersediaanya.
